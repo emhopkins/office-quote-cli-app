@@ -1,4 +1,4 @@
-# Office Quote Generator 
+# "The Office" Quote Generator 
 
 This Ruby Gem provides a CLI to view quotes from the TV show, "The Office".  Quotes were created from data on https://www.tvfanatic.com/quotes/shows/the-office/.
 

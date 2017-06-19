@@ -1,4 +1,6 @@
+require './config/environment'
+
 module TheOfficeQuoteGenerator
+	OfficeQuoteController.new
 end
 
-require_relative '../config/environment'

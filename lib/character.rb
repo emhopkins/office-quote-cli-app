@@ -56,4 +56,14 @@ class Character
 			end
 		end
 	end
+
+	def self.random_quote_for_character(name)
+		@@all.each do |character|
+			if character.name == name
+				n = character.quotes.size - 1
+				r = rand(0..n)
+				puts "#{character.quotes[r].content}"
+			end
+		end
+	end
 end

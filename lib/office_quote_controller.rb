@@ -34,12 +34,21 @@ class OfficeQuoteController
 
 	def get_quotes_by_character
 		input = ""
-		while input != "exit" do
-			puts "You may choose from these characters"
+		while input != "exit" && input != "n" && input != "N" do
+			puts "You may choose from these characters: "
 			Character.list_all_characters
 			puts "Please select from one of the following characters by entering their name: "
 			input = gets.chomp
-			Character.list_all_quotes_for_character(input)
+			puts "Would you like to hear 1 or all of their quotes?"
+			puts "Enter \"1\" for one quote and anything else to hear all."
+			option = gets.chomp
+			if option != "1"
+				Character.list_all_quotes_for_character(input)
+			else
+				Character.random_quote_for_character(input)
+			end
+			puts "Would you like to choose another character? (y/n)"
+			input = gets.chomp
 		end
 
 

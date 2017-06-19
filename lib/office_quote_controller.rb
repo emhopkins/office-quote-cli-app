@@ -4,9 +4,6 @@ class OfficeQuoteController
 		quotes = Scraper.new
 		quotes.get_quote_pages
 		start_cli
-		# Quote.list_all_quotes
-		# Character.list_all_characters
-		# Character.list_all_quotes_by_character
 	end
 
 	def start_cli
@@ -21,11 +18,10 @@ class OfficeQuoteController
 			input = gets.chomp
 			if input == "1"
 				get_quotes_by_character
-				puts "1"
 			elsif input == "2"
-				puts "2"
+				get_dialouge_quote
 			elsif input == "3"
-				puts "3e"
+				get_random_quote
 			elsif input != "exit"
 				puts "Please enter 1, 2 or 3"
 			end
@@ -50,8 +46,24 @@ class OfficeQuoteController
 			puts "Would you like to choose another character? (y/n)"
 			input = gets.chomp
 		end
+	end
 
+	def get_dialouge_quote
+		input = ""
+		while input != "exit" && input != "n" && input != "N" do
+			Quote.get_dialouge
+			puts "Would you like to hear another dialouge? (y/n)"
+			input = gets.chomp
+		end
+	end
 
+	def get_random_quote
+		input = ""
+		while input != "exit" && input != "n" && input != "N" do
+			Quote.get_random
+			puts "Would you like to hear another quote? (y/n)"
+			input = gets.chomp
+		end
 	end
 
 end

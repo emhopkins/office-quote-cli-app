@@ -43,4 +43,17 @@ class Character
 			end
 		end
 	end
+
+	def self.list_all_quotes_for_character(name)
+		@@all.each do |character|
+			i = 0
+			if character.name == name
+				puts "Quotes for #{character.name}: "
+				character.quotes.each do |quote|
+					i += 1
+					puts "#{i}. #{quote.content}"
+				end
+			end
+		end
+	end
 end

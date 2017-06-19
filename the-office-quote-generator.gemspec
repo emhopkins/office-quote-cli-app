@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Elena Hopkins"]
   s.email       = 'elenamariehopkins@gmail.com'
   s.license     = 'MIT'
+  s.files       = ["lib/the_office_quote_generator.rb", "lib/office_quote_controller.rb", "lib/quote.rb", "lib/character.rb", "lib/scraper.rb", "bin/console"]
 
   s.add_development_dependency "bundler", "~> 1.10"
   s.add_development_dependency "nokogiri", ">= 0"

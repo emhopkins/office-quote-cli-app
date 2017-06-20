@@ -10,9 +10,12 @@ Gem::Specification.new do |s|
   s.authors     = ["Elena Hopkins"]
   s.email       = 'elenamariehopkins@gmail.com'
   s.license     = 'MIT'
-  s.files       = ["lib/the_office_quote_generator.rb", "lib/office_quote_controller.rb", "lib/quote.rb", "lib/character.rb", "lib/scraper.rb", "bin/console"]
+  s.files       = ["lib/the_office_quote_generator.rb", "lib/office_quote_controller.rb", "lib/quote.rb", "lib/character.rb", "lib/scraper.rb", "bin/the-office-quote-generator"]
+  s.require_paths = ["lib"]
+  s.executables << 'the-office-quote-generator'
+  s.homepage    = 'https://rubygems.org/gems/the-office-quote-generator'
 
-  s.add_development_dependency "bundler", "~> 1.10"
-  s.add_development_dependency 'nokogiri', '~> 0'
-  s.add_development_dependency 'pry', '~> 0'
+  s.add_runtime_dependency "bundler", "~> 1.10"
+  s.add_runtime_dependency 'nokogiri'
+  s.add_runtime_dependency 'pry', '~> 0'
 end

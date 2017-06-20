@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'office_quote_controller'
+require 'quote'
+require 'character'
+require 'the_office_quote_generator'
+require 'scraper'
+
+
+OfficeQuoteController.new

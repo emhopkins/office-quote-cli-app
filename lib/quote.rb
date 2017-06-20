@@ -6,14 +6,14 @@ class Quote
 	attr_accessor :character, :content
 
 	@@all = []
-	@@dialouge_quotes = []
+	@@dialogue_quotes = []
 
 	def initialize(content, character="")
 		@content = content
 		if character != ""
       		self.character=(character)
       	else
-      		@@dialouge_quotes << self
+      		@@dialogue_quotes << self
     	end
     	@@all << self
     end
@@ -49,10 +49,10 @@ class Quote
 		character
 	end
 
-	def self.get_dialouge
-		n = @@dialouge_quotes.size - 1
+	def self.get_dialogue
+		n = @@dialogue_quotes.size - 1
 		r = rand(0..n)
-		puts "#{@@dialouge_quotes[r].content}"
+		puts "#{@@dialogue_quotes[r].content}"
 	end
 
 	def self.get_random

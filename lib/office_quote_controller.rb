@@ -13,13 +13,13 @@ class OfficeQuoteController
 			puts "If you'd like to exit, enter \"exit\""
 			puts "Please select from the following options: "
 			puts "1. Choose a quote from a specific character"
-			puts "2. Hear a dialouge quote (between multiple characters)"
+			puts "2. Hear a dialogue quote (between multiple characters)"
 			puts "3. Hear a random quote"
 			input = gets.chomp
 			if input == "1"
 				get_quotes_by_character
 			elsif input == "2"
-				get_dialouge_quote
+				get_dialogue_quote
 			elsif input == "3"
 				get_random_quote
 			elsif input != "exit"
@@ -48,11 +48,11 @@ class OfficeQuoteController
 		end
 	end
 
-	def get_dialouge_quote
+	def get_dialogue_quote
 		input = ""
 		while input != "exit" && input != "n" && input != "N" do
-			Quote.get_dialouge
-			puts "Would you like to hear another dialouge? (y/n)"
+			Quote.get_dialogue
+			puts "Would you like to hear another dialogue? (y/n)"
 			input = gets.chomp
 		end
 	end
